@@ -1,3 +1,5 @@
+vowels = {"a","e","i","o","u","y"}
+
 def doubles(s:str) -> int:
     ans = 0
     for i in range(len(s)-1):
@@ -5,7 +7,11 @@ def doubles(s:str) -> int:
         if a in vowels and a==b: ans+=1
     return ans
 
-vowels = {"a","e","i","o","u","y"}
+assert(doubles("ee")==1)
+assert(doubles("eevaa")==2)
+assert(doubles("baloon")==1)
+assert(doubles("llbbtt")==0)
+
 
 while True:
     n = int(input()) # size of sample
